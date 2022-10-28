@@ -1,0 +1,202 @@
+@import "nullstyle";
+@import "vars";
+@import url("https://fonts.googleapis.com/css?family=Overpass:,regular,700");
+
+body {
+  font-size: 15px;
+  line-height: 24px;
+  font-family: Overpass;
+  font-weight: 400;
+  background: $colorDarkBlue;
+  height: 100%;
+}
+.wrapper {
+  max-width: $widthContainer + px;
+  margin: 0 auto 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+  @media (max-height: 550px) {
+    align-items: flex-start;
+    padding: 20px;
+    height: 100%;
+  }
+}
+.card {
+  border-radius: 30px;
+  max-width: 410px;
+  width: 100%;
+  background: $colorBlue;
+  color: $colorLightGrey;
+  @media (max-width: 450px) {
+    border-radius: 15px;
+  }
+}
+.card-title {
+  color: $colorWhite;
+  font-size: 32px;
+  font-weight: 700;
+  @media (max-width: 450px) {
+    margin: 0px 0px 15px 0px;
+    font-size: 28px;
+  }
+}
+.card-rating {
+  padding: 30px;
+  @media (max-height: 550px) {
+    padding-top: 20px;
+  }
+  @media (max-width: 450px) {
+    padding: 25px;
+  }
+  @media (max-width: 400px) {
+    padding: 15px;
+  }
+
+  // .card-rating__image
+
+  &__image {
+    margin: 0px 0px 35px 0px;
+    @media (max-width: 450px) {
+      margin: 0px 0px 25px 0px;
+    }
+    span {
+      padding: 15px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      background: $colorMediumGrey;
+      border-radius: 50%;
+    }
+  }
+
+  // .card-rating__title
+
+  &__title {
+    margin: 0px 0px 20px 0px;
+    @media (max-width: 450px) {
+      margin: 0px 0px 15px 0px;
+    }
+  }
+
+  // .card-rating__nums
+
+  &__nums {
+    margin: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      width: 50px;
+      height: 50px;
+      @media (max-width: 450px) {
+        width: 40px;
+        height: 40px;
+      }
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background: $colorMediumGrey;
+        border-radius: 50%;
+        font-weight: 700;
+        color: $colorLightGrey;
+        transition: all 0.3s ease 0s;
+        &.active {
+          background: #788998;
+          color: $colorWhite;
+          &:hover {
+            background: #788998;
+            color: $colorWhite;
+          }
+        }
+        &:hover {
+          background: $colorOrange;
+          color: $colorWhite;
+        }
+      }
+    }
+  }
+
+  // .card-rating__button
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    padding: 15px 0px;
+    text-align: center;
+    border-radius: 30px;
+    background: $colorOrange;
+    color: $colorWhite;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: all 0.3s ease 0s;
+    @media (max-width: 450px) {
+      border-radius: 20px;
+    }
+    &:hover {
+      background: $colorWhite;
+      color: $colorOrange;
+    }
+  }
+
+  // . card-rating__error
+  &__error {
+    margin: 10px 0px 0px 0px;
+    color: #f40000;
+  }
+}
+.card-thanks {
+  text-align: center;
+  padding: 45px 35px;
+  @media (max-height: 550px) {
+    padding-top: 25px;
+  }
+  @media (max-width: 450px) {
+    padding: 25px;
+  }
+  @media (max-width: 400px) {
+    padding: 15px;
+  }
+  // .card-thanks__image
+
+  &__image {
+    margin: 0px 0px 30px 0px;
+  }
+
+  // .card-thanks__rating
+
+  &__rating {
+    margin: 0px 0px 35px 0px;
+    @media (max-width: 450px) {
+      margin: 0px 0px 30px 0px;
+    }
+    span {
+      color: $colorOrange;
+      background: $colorMediumGrey;
+      display: inline-block;
+      padding: 7px 20px;
+      border-radius: 30px;
+      @media (max-width: 450px) {
+        padding: 5px 10px;
+      }
+    }
+  }
+
+  // .card-thanks__title
+  &__title {
+    margin: 0px 0px 20px 0px;
+    @media (max-width: 450px) {
+      margin: 0px 0px 15px 0px;
+    }
+  }
+}
